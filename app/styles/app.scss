@@ -1,13 +1,3 @@
-# Initial Setup (SASS and susy)
-
-* ember new myproject
-* cd myproject
-* ember install:npm broccoli-sass
-* ember install:bower susy
-* git mv app/style/app.css app/style/app.scss
-
-In app/styles/app.scss put:
-
 @import "bower_components/susy/sass/susy";
 
 $susy: (
