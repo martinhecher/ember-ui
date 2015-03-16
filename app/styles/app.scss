@@ -95,10 +95,12 @@ body {
   background-color: darkgray;
 }
 
-.wb-toolswitch {
+.wb-toolswitch {  
   position: absolute;
   top: 0;
   right: 0;
+
+  z-index: 100;
 
   padding: 2px;
   font-size: 25px;

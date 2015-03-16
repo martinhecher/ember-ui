@@ -1,5 +1,8 @@
 <div class="hk-main">
-	<header>APP <span class="wb-toolswitch">{{wb-stages items=stages  label="STAGES"}} {{#link-to "admin"}}&#9991;{{/link-to}}</span></header>
+	<header>
+		{{wb-stages items=stages  label="STAGES"}} 
+		<span class="wb-toolswitch">{{#link-to "admin"}}&#9991;{{/link-to}}</span>
+	</header>
 
 	<aside class="left">
 		{{wb-sessions items=session label="ARCHIVE"}}
@@ -11,5 +14,7 @@
 		{{wb-tools items=tools  label="TOOLS"}}
 	</aside>
 
-	<footer>INFO: #sessionPlugins: {{session.length}} | #toolPlugins: {{tools.length}}</footer>
+	<footer>
+		INFO: #sessionPlugins: {{session.length}} | #toolPlugins: {{tools.length}}
+	</footer>
 </div>
