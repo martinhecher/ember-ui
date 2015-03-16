@@ -1,5 +1,6 @@
 @import "bower_components/susy/sass/susy";
 @import "config";
+@import "workbench-ui/workbench-ui";
 
 $susy: (
   flow: ltr,
@@ -32,7 +33,7 @@ body {
 	@include container(100%);
 }
 
-header {
+.hk-main > header {
   position: absolute;
 
   top: 0;
@@ -44,7 +45,7 @@ header {
   background-color: lightgreen;
 }
 
-aside {
+.hk-main > aside {
   position: absolute;
 
   top: $header-height;
@@ -71,7 +72,7 @@ aside {
   }
 }
 
-main {
+.hk-main > main {
   position: absolute;
 
   top: $header-height;
@@ -82,7 +83,7 @@ main {
   background-color: brown;
 }
 
-footer {
+.hk-main >footer {
   position: absolute;
 
   bottom: 0;

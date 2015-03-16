@@ -1,0 +1,37 @@
+.wb-stages {
+  ul {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+  }
+
+  li {
+    padding: 4px;
+    padding-left: 25px;
+
+    font-color: gray;
+    background-color: gray;
+
+    border-width: 1px;
+    border-color: black;
+    border-bottom-style: solid;
+  }
+
+  li:hover {
+    background-color: lightgray;
+  }
+}
+
+.wb-stages > header {
+  background-color: darkgray;
+  color: white;
+
+  padding: 5px;
+
+  text-align: center;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+}
