@@ -55,7 +55,7 @@ aside {
 
     left: 0;
 
-    width: $sidebar-left-width;
+    width: $sidebarLeft-width;
 
     background-color: lightblue;
   }
@@ -65,7 +65,7 @@ aside {
 
     right: 0;
 
-    width: $sidebar-right-width;
+    width: $sidebarRight-width;
 
     background-color: orange;
   }
@@ -76,8 +76,8 @@ main {
 
   top: $header-height;
   bottom: $footer-height;
-  left: $sidebar-left-width;
-  right: $sidebar-right-width;
+  left: $sidebarLeft-width;
+  right: $sidebarRight-width;
 
   background-color: brown;
 }
