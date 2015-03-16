@@ -1,4 +1,5 @@
 @import "bower_components/susy/sass/susy";
+@import "config";
 
 $susy: (
   flow: ltr,
@@ -32,23 +33,63 @@ body {
 }
 
 header {
-	background-color: lightgreen;
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+    
+  height: $header-height;
+
+  background-color: lightgreen;
 }
 
 aside {
-	&.left {
-		background-color: lightblue;
-	}
+  position: absolute;
 
-	&.right {
-		background-color: orange;
-	}
+  top: $header-height;
+  bottom: $footer-height;
+
+  &.left {
+    position: absolute;
+
+    left: 0;
+
+    width: $sidebar-left-width;
+
+    background-color: lightblue;
+  }
+
+  &.right {
+    position: absolute;
+
+    right: 0;
+
+    width: $sidebar-right-width;
+
+    background-color: orange;
+  }
 }
 
 main {
-	background-color: gray;
+  position: absolute;
+
+  top: $header-height;
+  bottom: $footer-height;
+  left: $sidebar-left-width;
+  right: $sidebar-right-width;
+
+  background-color: brown;
 }
 
 footer {
-	background-color: lightgreen;
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: $footer-height;
+
+  background-color: darkgray;
 }

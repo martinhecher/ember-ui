@@ -1,5 +1,5 @@
 {
-  "name": "workbench-ui-base",
+  "name": "holmenkollen-ui",
   "version": "0.0.0",
   "description": "Base setup for one or multiple WorkbenchUI components.",
   "private": true,
