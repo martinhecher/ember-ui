@@ -3,8 +3,13 @@
 
 	<main>
 		VIEWPORT
-		{{outlet}}
+		
+		<ul>
+		{{#each plugin in model}}
+			<li>{{plugin.label}}</li>
+		{{/each}}
+		</ul>
 	</main>
 
-	<footer>#plugins: 0</footer>
+	<footer>#plugins: {{model.length}}</footer>
 </div>
