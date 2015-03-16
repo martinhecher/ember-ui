@@ -4,29 +4,27 @@ export default Ember.Route.extend({
 	model: function() {
 		var appData = {};
 
-		appData.sessionTools = [{
+		appData.plugins = [{
 			label: "Import files",
-			location: ["sidebar-left"]
+			type: 'session'
 		},{
 			label: "File information",
-			location: ["sidebar-left"]
+			type: 'session'
 		},{
 			label: "Recently used archives",
-			location: ["sidebar-left"]
-		}];
-
-		appData.stageEditors = [{
+			type: 'session'
+		},{
 			label: "Metadata editor",
-			location: ["sidebar-right"]
+			type: 'sip-stage'
 		},{
 			label: "Tagging",
-			location: ["[sidebar-right"]
+			type: 'general'
 		},{
 			label: "Semantic Enrichment",
-			location: ["sidebar-right", "viewport-main"]
+			location: 'sip-stage'
 		},{
 			label: "Export selected",
-			location: ["sidebar-right"]
+			type: 'general'
 		}];
 
 		return appData;
@@ -34,23 +32,23 @@ export default Ember.Route.extend({
 
 	setupController: function(controller, model) {
 		var store = this.store,
-		modelPrepared = Ember.Object.create({}),
-		sessionToolsItems = [],
-		stageEditors = [];
+		context = Ember.Object.create({}),
+		sessionPlugins = [],
+		componentPlugins = [];
 
-		model.sessionTools.forEach(function(item) {
+		model.plugins.forEach(function(item) {
 			var record = store.createRecord('plugin-component', item);
-			sessionToolsItems.push(record);
+
+			if (item.type === 'session') {
+				sessionPlugins.push(record);
+			} else {
+				componentPlugins.push(record);
+			}
 		});
 
-		model.stageEditors.forEach(function(item) {
-			var record = store.createRecord('plugin-component', item);
-			stageEditors.push(record);
-		});
+		context.set('session', sessionPlugins);
+		context.set('components', componentPlugins);
 
-		modelPrepared.set('sessionTools', sessionToolsItems);
-		modelPrepared.set('stageEditors', stageEditors);
-
-		this._super(controller, modelPrepared);
+		this._super(controller, context);
 	}
 });
