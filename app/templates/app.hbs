@@ -1,15 +1,15 @@
 <div class="hk-main">
-	<header>KITCHENSINK <span class="wb-toolswitch">{{#link-to "admin"}}&#9991;{{/link-to}}</span></header>
+	<header>APP <span class="wb-toolswitch">{{wb-stages items=stages  label="STAGES"}} {{#link-to "admin"}}&#9991;{{/link-to}}</span></header>
 
 	<aside class="left">
-		{{wb-sessions items=session label="SESSIONS"}}
+		{{wb-sessions items=session label="ARCHIVE"}}
 	</aside>
 
 	<main>VIEWPORT {{outlet}}</main>
 
 	<aside class="right">
-		{{wb-stages items=components  label="TOOLS"}}
+		{{wb-tools items=tools  label="TOOLS"}}
 	</aside>
 
-	<footer>INFO: #sessionPlugins: {{session.length}} | #componentPlugins: {{components.length}}</footer>
+	<footer>INFO: #sessionPlugins: {{session.length}} | #toolPlugins: {{tools.length}}</footer>
 </div>

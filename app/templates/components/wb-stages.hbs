@@ -1,9 +1,6 @@
-<div class="wb-sessions">
-	<header>{{label}}</header>
-
-	<main>
-		{{#hk-sidebar items=items as |item|}}
-			{{item.label}}
-		{{/hk-sidebar}}
-	</main>
+<div class="wb-stages">
+{{log items}}
+	{{#each stage in items}}
+		| <div style="display: inline-block;">{{stage.label}}</div>
+	{{/each}}
 </div>

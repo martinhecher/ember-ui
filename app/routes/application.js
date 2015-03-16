@@ -6,32 +6,48 @@ export default Ember.Route.extend({
 
 		appConfig.plugins = [{
 			id: 0,
-			label: "Import files",
+			label: "Import Files",
 			type: 'session'
 		},{
 			id: 1,
-			label: "File information",
+			label: "File Information",
 			type: 'session'
 		},{
 			id: 2,
-			label: "Recently used archives",
+			label: "Recently Used Archives",
 			type: 'session'
 		},{
 			id: 3,
-			label: "Metadata editor",
-			type: 'sip-stage'
+			label: "Metadata Editor",
+			type: 'session'
 		},{
 			id: 4,
 			label: "Tagging",
-			type: 'general'
+			type: 'tool'
 		},{
 			id: 5,
-			label: "Semantic Enrichment",
-			location: 'sip-stage'
+			label: "Archive Overview",
+			type: 'sip-stage'
 		},{
 			id: 6,
-			label: "Export selected",
-			type: 'general'
+			label: "File Preview",
+			type: 'sip-stage'
+		},{
+			id: 7,
+			label: "Geometric Enrichment",
+			type: 'sip-stage'
+		},{
+			id: 8,
+			label: "Export Selected",
+			type: 'tool'
+		},{
+			id: 9,
+			label: "Semantic Enrichment",
+			type: 'sip-stage'
+		},{
+			id: 10,
+			label: "Search & Retrieve",
+			type: 'sip-stage'
 		}];
 
 

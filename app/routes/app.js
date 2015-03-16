@@ -8,18 +8,23 @@ export default Ember.Route.extend({
 	setupController: function(controller, model) {
 		var context = Ember.Object.create(),
 			sessionPlugins = [],
-			componentPlugins = [];
+			stagePlugins = [],
+			toolPlugins = [];
 
 		model.forEach(function(item) {
-			if (item.get('type') === 'session') {
+			var type = item.get('type');
+			if (type === 'session') {
 				sessionPlugins.push(item);
-			} else {
-				componentPlugins.push(item);
+			} else if (type === 'sip-stage') {
+				stagePlugins.push(item);
+			} else if (type === 'tool') {
+				toolPlugins.push(item);
 			}
 		});
 
 		context.set('session', sessionPlugins);
-		context.set('components', componentPlugins);
+		context.set('stages', stagePlugins);
+		context.set('tools', toolPlugins);
 
 		this._super(controller, context);
 	}
