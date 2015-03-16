@@ -1,11 +1,23 @@
-<header>HEADER</header>
+<header>KITCHENSINK</header>
 
-<aside class="left">SIDEBAR-LEFT{{outlet "sidebar-left"}}</aside>
+<aside class="left">
+	SESSION
 
-<main>MAIN{{outlet "main"}}</main>
+	{{#hk-sidebar items=sessionTools as |item|}}
+		<h4>{{item.label}}</h4>
+	{{/hk-sidebar}}
+</aside>
 
-<aside class="right">SIDEBAR-RIGHT{{outlet "sidebar-right"}}</aside>
+<main>VIEWPORT{{outlet "main"}}</main>
 
-<footer>FOOTER</footer>
+<aside class="right">
+	STAGES
+
+	{{#hk-sidebar items=stageEditors as |item|}}
+		<h4>{{item.label}}</h4>
+	{{/hk-sidebar}}
+</aside>
+
+<footer>INFO: #sessionTools: {{sessionTools.length}} | #stages: {{stageEditors.length}}</footer>
 
 
