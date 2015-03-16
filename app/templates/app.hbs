@@ -1,0 +1,15 @@
+<div class="hk-main">
+	<header>KITCHENSINK <span class="wb-toolswitch">{{#link-to "admin"}}&#9991;{{/link-to}}</span></header>
+
+	<aside class="left">
+		{{wb-sessions items=sessionTools label="SESSIONS"}}
+	</aside>
+
+	<main>VIEWPORT {{outlet}}</main>
+
+	<aside class="right">
+		{{wb-stages items=stageEditors  label="TOOLS"}}
+	</aside>
+
+	<footer>INFO: #sessionTools: {{sessionTools.length}} | #stages: {{stageEditors.length}}</footer>
+</div>
