@@ -15,7 +15,7 @@ $susy: (
   global-box-sizing: content-box,
   last-flow: to,
   debug: (
-    image: show,
+    image: hide,
     color: rgba(#66f, .25),
     output: background,
     toggle: top right,
@@ -42,7 +42,11 @@ body {
     
   height: $header-height;
 
+  padding-left: 30px;
+
   background-color: lightgreen;
+
+  line-height: $header-height;
 }
 
 .hk-main > aside {

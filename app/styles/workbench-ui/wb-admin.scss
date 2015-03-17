@@ -1,46 +1,10 @@
-.wb-admin > header {
-  background-color: darkgray;
-  color: white;
-
-  padding: 5px;
-
-  height: $header-height;
-
-  text-align: center;
-
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
-}
-
 .wb-admin > main {
   position: absolute;
 
   top: $header-height;
   bottom: $footer-height;
-  left: 0;
-  right: 0;
+  left: $sidebarLeft-width;
+  right: 0 !important;
 
-  background-color: lightgreen;
-}
-
-.wb-admin > footer {
-  position: absolute;
-
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  height: $footer-height;
-
-  background-color: darkgray;
-  color: white;
-
-  padding: 5px;
-
-  text-align: center;
-
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
+  background-color: brown;
 }

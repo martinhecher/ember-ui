@@ -1,17 +1,15 @@
-<div class="wb-admin">
+<div class="wb-admin hk-main">
 	<header>
 		Admin
 		<span class="wb-toolswitch">{{#link-to "app"}}&#9991;{{/link-to}}</span>
 	</header>
 
+	<aside class="left">
+		{{wb-sessions items=plugins label="PLUGINS"}}
+	</aside>
+
 	<main>
 		VIEWPORT
-		
-		<ul>
-		{{#each plugin in model}}
-			<li>{{plugin.label}}</li>
-		{{/each}}
-		</ul>
 	</main>
 
 	<footer>
