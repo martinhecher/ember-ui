@@ -8,10 +8,19 @@
 		{{wb-sessions items=session label="ARCHIVE"}}
 	</aside>
 
-	<main>VIEWPORT {{archive-overview items=files}}</main>
+	<main>
+		VIEWPORT 
+
+		{{#list-overview items=files as |file|}}
+			<center>
+				<p>Path: {{file.path}}</p>
+				<p>Size: {{file.size}}</p>
+			</center>
+		{{/list-overview}}
+	</main>
 
 	<aside class="right">
-		{{wb-tools items=tools  label="TOOLS"}}
+		{{wb-tools items=tools label="TOOLS"}}
 	</aside>
 
 	<footer>

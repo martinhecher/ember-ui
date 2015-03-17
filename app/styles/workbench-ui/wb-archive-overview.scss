@@ -1,0 +1,81 @@
+.wb-archive-overview {
+  li {
+    @include gallery(3 of 12);
+
+    height: 150px;
+
+    margin-bottom: gutter(10);
+    
+    color: gray;
+    background-color: white;
+  }
+}
+
+.wb-archive-overview {
+  ul {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+  }
+
+  li:hover {
+    background-color: lightgray;
+  }
+}
+
+.wb-archive-overview > header {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background-color: darkgray;
+  color: white;
+
+  padding: 5px;
+
+  height: $header-height;  
+
+  text-align: center;
+  line-height: $header-height;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+}
+
+.wb-archive-overview > main {
+  position: absolute;
+  
+  top: $header-height + 12px; // FIXXME: take into account header padding + border
+  left: 0;
+  right: 0;
+
+  height: 100%;
+
+  margin: 20px;
+}
+
+.wb-archive-overview > footer {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: $footer-height;
+
+  background-color: darkgray;
+  color: white;
+
+  padding: 5px;
+
+  text-align: center;
+  line-height: $header-height;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+}

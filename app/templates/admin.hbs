@@ -10,6 +10,10 @@
 
 	<main>
 		VIEWPORT
+
+		{{#list-overview items=plugins as |plugin|}}
+			<center>{{plugin.label}}</center>
+		{{/list-overview}}
 	</main>
 
 	<footer>
