@@ -1,5 +1,6 @@
 @import "bower_components/susy/sass/susy";
 @import "config";
+@import "glog-app";
 @import "workbench-ui/workbench-ui";
 
 $susy: (
@@ -127,21 +128,6 @@ body {
 }
 
 .wb-import-files .js-is-debugging {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  padding: 5px;
-
-  width: 100%;
-
-  background: lightgray;
-
-  border-style: solid;
-  border-width-bottom: 3px;
-}
-
-.js-is-debugging {
   position: absolute;
   bottom: 0;
   left: 0;

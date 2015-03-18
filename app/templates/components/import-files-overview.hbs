@@ -1,9 +1,14 @@
+<span {{action "toggleDebugger"}} class="wb-toolswitch">&#9991;</span>
+
 <div {{bind-attr class='styleNamespace theme'}}>
-	{{#if isDebugging}}
-		<div class="js-is-debugging">
-		<strong>Style:</strong> Namespace: {{styleNamespace}} | Theme: {{theme}}
-		</div>
+	{{#if glogApp}}
+		{{#glog-app}}
+			<div class="glog-item">
+				<strong>Style:</strong> Namespace: {{styleNamespace}} | Theme: {{theme}}
+			</div>
+		{{/glog-app}}
 	{{/if}}
+
 	<header>Import Files</header>
 
 	<main>
@@ -14,3 +19,4 @@
 		</center>
 	</main>
 </div>
+
