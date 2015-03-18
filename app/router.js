@@ -8,6 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('admin');
   this.route('app');
+  this.route('rpe');
 });
 
 export default Router;

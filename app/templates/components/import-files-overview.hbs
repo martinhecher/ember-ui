@@ -1,4 +1,9 @@
-<div class="wb-import-files">
+<div {{bind-attr class='styleNamespace theme'}}>
+	{{#if isDebugging}}
+		<div class="js-is-debugging">
+		<strong>Style:</strong> Namespace: {{styleNamespace}} | Theme: {{theme}}
+		</div>
+	{{/if}}
 	<header>Import Files</header>
 
 	<main>
