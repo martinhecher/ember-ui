@@ -1,15 +1,23 @@
 <div class="hk-main">
 	<header>
-		{{wb-stages items=stages  label="STAGES"}} 
+		{{!-- {{wb-stages items=stages  label="STAGES"}}  --}}
 		<span class="wb-toolswitch">{{#link-to "admin"}}&#9991;{{/link-to}}</span>
 	</header>
 
 	<aside class="left">
-		{{wb-sessions items=session label="ARCHIVE"}}
+		{{wb-sessions items=session label="DURAARK"}}
+
+		{{!-- {{import-files-overview}} --}}
+			{{!-- <ul><li>File</li><li>Folder</li><li>L3S (remote)</li></ul> --}}
+		{{!-- {{/import-files-overview}} --}}
 	</aside>
 
 	<main>
-		VIEWPORT 
+		<div id="cesiumContainer"></div>
+		  {{!-- <script>
+    var viewer = new Cesium.Viewer('cesiumContainer');
+  </script>
+		{{cesium-globe}} --}}
 
 		{{#list-overview items=files as |file|}}
 			<center>
@@ -20,7 +28,7 @@
 	</main>
 
 	<aside class="right">
-		{{wb-tools items=tools label="TOOLS"}}
+		{{wb-tools items=tools label="WORKBENCH"}}
 	</aside>
 
 	<footer>

@@ -12,7 +12,8 @@ export default Ember.Route.extend({
 			toolPlugins = [];
 
 		model.plugins.forEach(function(item) {
-			var type = item.get('type');
+			var type = item.get('anchor');
+			sessionPlugins.push(item);
 			if (type === 'session') {
 				sessionPlugins.push(item);
 			} else if (type === 'sip-stage') {
@@ -23,8 +24,8 @@ export default Ember.Route.extend({
 		});
 
 		context.set('session', sessionPlugins);
-		context.set('stages', stagePlugins);
-		context.set('tools', toolPlugins);
+		context.set('stages', sessionPlugins);
+		context.set('tools', sessionPlugins);
 		context.set('files', model.files)
 
 		this._super(controller, context);

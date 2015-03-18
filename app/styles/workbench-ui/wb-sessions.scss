@@ -4,24 +4,26 @@
     padding: 0;
 
     list-style-type: none;
-  }
 
-  li {
-    padding: 4px;
-    padding-left: 25px;
+    overflow: auto;
+   }
 
-    font-color: gray;
-    background-color: gray;
-
-    border-width: 1px;
-    border-color: black;
-    border-bottom-style: solid;
-  }
+  // li {
+  //   border-width: 1px;
+  //   border-color: black;
+  //   border-bottom-style: solid;
+  // }
 
   li:hover {
     background-color: lightgray;
   }
 }
+
+// .wb-sessions:after {
+//   content:"";
+//   display:table;
+//   clear:both;
+// }
 
 .wb-sessions > header {
   position: absolute;
@@ -31,7 +33,6 @@
   right: 0;
 
   background-color: darkgray;
-  color: white;
 
   padding: 5px;
 
@@ -39,10 +40,6 @@
 
   text-align: center;
   line-height: $header-height;
-
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
 }
 
 .wb-sessions > main {

@@ -8,47 +8,58 @@ default Ember.Route.extend({
         appConfig.plugins = [{
             id: 0,
             label: "Import Files",
-            type: 'session'
+            type: 'import-files-overview',
+            anchor: 'session'  
         }, {
             id: 1,
-            label: "File Information",
-            type: 'session'
+            label: "Recently Used Archives",
+            type: 'import-files-overview',
+            anchor: 'session'  
         }, {
             id: 2,
-            label: "Recently Used Archives",
-            type: 'session'
+            label: "Metadata",
+            type: 'metadata-editor',
+            anchor: 'session'  
         }, {
             id: 3,
-            label: "Metadata Editor",
-            type: 'session'
+            label: "File Information",
+            type: 'import-files-overview',
+            anchor: 'session'  
         }, {
             id: 4,
             label: "Tagging",
-            type: 'tool'
+            type: 'import-files-overview',
+            anchor: 'session'  
         }, {
             id: 5,
             label: "Archive Overview",
-            type: 'sip-stage'
+            type: 'import-files-overview',
+            anchor: 'session'  
         }, {
             id: 6,
             label: "File Preview",
-            type: 'sip-stage'
+            type: 'import-files-overview',
+            anchor: 'session'  
         }, {
             id: 7,
             label: "Geometric Enrichment",
-            type: 'sip-stage'
+            type: 'import-files-overview',
+            anchor: 'session'  
         }, {
             id: 8,
             label: "Export Selected",
-            type: 'tool'
+            type: 'import-files-overview',
+            anchor: 'session'  
         }, {
             id: 9,
             label: "Semantic Enrichment",
-            type: 'sip-stage'
+            type: 'import-files-overview',
+            anchor: 'session'  
         }, {
             id: 10,
             label: "Search & Retrieve",
-            type: 'sip-stage'
+            type: 'import-files-overview',
+            anchor: 'session'  
         }];
 
         appConfig.files = [{
