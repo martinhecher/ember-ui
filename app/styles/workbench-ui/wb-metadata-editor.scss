@@ -1,0 +1,25 @@
+.wb-metadata-editor {
+  header {
+    padding: 3px;
+    background-color: #999;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    border-width: 1px;
+    border-color: black;
+    border-top-style: solid;
+    border-bottom-style: solid;
+  }
+
+  main {
+    margin: 3px;
+  }
+
+  button {
+    padding: 3px;
+
+    width: 100%;
+    min-width: 100px;
+  }
+}

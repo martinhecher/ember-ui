@@ -1,5 +1,22 @@
-<ul>
-	<li>Creator: Martin Hecher</li>
-	<li>Date: 2015-04-01</li>
-	<li>Adress: Inffeldgasse 16c</li>
-</ul>
+<span {{action "toggleDebugger"}} class="wb-toolswitch">&#9991;</span>
+
+{{#if glogApp}}
+	{{#glog-app}}
+		<div class="glog-item">
+			<strong>Style:</strong> Namespace: {{styleNamespace}} | Theme: {{theme}}
+		</div>
+	{{/glog-app}}
+{{/if}}
+
+<header>Metadata Editor</header>
+
+<main>
+	<ul>
+		<li>Creator: Martin Hecher</li>
+		<li>Date: 2015-04-01</li>
+		<li>Adress: Inffeldgasse 16c</li>
+	</ul>
+</main>
+
+
+
