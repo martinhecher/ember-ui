@@ -1,10 +1,11 @@
 import Ember from 'ember';
 import layout from '../templates/components/metadata-editor';
-import Themeable from '../mixins/themeable';
+import hkPlugin from '../mixins/hk-plugin';
 
-export default Ember.Component.extend(Themeable, {
+export default Ember.Component.extend(hkPlugin, {
   layout: layout,
-  glogApp: true,
+  
+  hkIsDebugging: true,
 
   styleRoot: 'wb-metadata-editor',
   styleTheme: 't-light'

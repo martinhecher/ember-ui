@@ -1,16 +1,22 @@
 import Ember from 'ember';
 
 export default Ember.Mixin.create({
-	classNameBindings: ['glogApp:js-glog-app:js-glog-none', 
-							'glogTheme'],
+  classNameBindings: [
+    'glogEnabled:js-glog-app:js-glog-none',
+    'glogTheme'
+  ],
 
-  	glogApp: true,
+  glogEnabled: true,
 
-  	glogTheme: function() {
-  		if (this.get('glogApp')) {
-  			return 'glog-default';
-  		} else {
-  			return '';
-  		}
-  	}.property('glogApp')
+  glogTheme: function() {
+    if (this.get('glogEnabled')) {
+      return 'glog-default';
+    } else {
+      return '';
+    }
+  }.property('glogEnabled'),
+
+  onGlogEnabledChanged: function() {
+    console.log('[hk-plugin] Toggled debugging ...');
+  }.observes('glogEnabled')
 });

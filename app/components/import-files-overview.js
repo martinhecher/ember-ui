@@ -1,19 +1,12 @@
 import Ember from 'ember';
 import layout from '../templates/components/import-files-overview';
-import GraphicalLogger from '../mixins/glog-app';
-import Themeable from '../mixins/themeable';
+import hkPlugin from '../mixins/hk-plugin';
 
-export default Ember.Component.extend(Themeable, GraphicalLogger, {
-  glogApp: true,
-
-  styleRoot: 'wb-import-files',
-  styleTheme: 't-light',
-
+export default Ember.Component.extend(hkPlugin, {
   layout: layout,
 
-  actions: {
-  	toggleDebugger: function() {
-  		this.toggleProperty('glogApp');
-  	}
-  }
+  hkIsDebugging: true,
+
+  styleRoot: 'wb-import-files',
+  styleTheme: 't-light'
 });
