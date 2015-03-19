@@ -1,10 +1,8 @@
 <span {{action "hkToggleDebugger"}} class="wb-toolswitch">&#9991;</span>
 
-{{#if glogApp}}
+{{#if hkIsDebugging}}
 	{{#glog-app}}
-		<div class="glog-item">
 			<strong>Style:</strong> Namespace: {{styleNamespace}} | Theme: {{theme}}
-		</div>
 	{{/glog-app}}
 {{/if}}
 

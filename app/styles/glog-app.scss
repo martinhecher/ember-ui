@@ -1,5 +1,13 @@
-.js-glog-app {
+.js-glog-disabled {
+    .glog-item {
+        display: none;
+    }
+}
+
+.js-glog-enabled {
    .glog-item {
+        display: inline;
+        
         position: absolute;
         top: 0;
         bottom: 0;
