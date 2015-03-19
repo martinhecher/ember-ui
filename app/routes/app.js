@@ -6,7 +6,8 @@ export default Ember.Route.extend({
 	},
 
 	setupController: function(controller, model) {
-		var context = Ember.Object.create(),
+		var config = Ember.Object.create(),
+			state = Ember.Object.create(),
 			sessionPlugins = [],
 			stagePlugins = [],
 			toolPlugins = [];
@@ -21,10 +22,17 @@ export default Ember.Route.extend({
 			}
 		});
 
-		context.set('session', sessionPlugins);
-		context.set('tools', sessionPlugins);
-		context.set('files', model.files)
+		// 'config' contains all data loaded from the backend:
+		config.set('session', sessionPlugins);
+		config.set('tools', sessionPlugins);
 
-		this._super(controller, context);
+		// 'state' contains
+		state.set('files', model.files);
+		state.set('selectedFiles', []);
+
+		this._super(controller, state);
+
+		controller.set('config', config);
+		controller.set('state', state);
 	}
 });

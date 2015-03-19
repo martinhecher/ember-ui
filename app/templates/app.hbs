@@ -4,7 +4,7 @@
 	</header>
 
 	<aside class="left">
-		{{wb-sessions items=session files=files label="DURAARK"}}
+		{{wb-sessions items=config.session state=state label="DURAARK"}}
 	</aside>
 
 	<main>
@@ -23,10 +23,10 @@
 	</main>
 
 	<aside class="right">
-		{{wb-tools items=tools label="WORKBENCH"}}
+		{{wb-tools items=config.tools label="WORKBENCH"}}
 	</aside>
 
 	<footer>
-		INFO: #sessionPlugins: {{session.length}} | #toolPlugins: {{tools.length}}
+		INFO: #sessionPlugins: {{config.session.length}} | #toolPlugins: {{config.tools.length}}
 	</footer>
 </div>
