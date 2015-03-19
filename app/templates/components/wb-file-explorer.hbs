@@ -1,0 +1,8 @@
+{{#list-overview items=items as |file|}}
+	<div {{action "selectFile" file}}>
+		<center>
+			<p>Path: {{file.path}}</p>
+			<p>Size: {{file.size}}</p>
+		</center>
+	</div>
+{{/list-overview}}

@@ -7,9 +7,8 @@ export default Ember.Route.extend({
 
 	setupController: function(controller, model) {
 		var config = Ember.Object.create(),
-			state = Ember.Object.create(),
+			app = Ember.Object.create(),
 			sessionPlugins = [],
-			stagePlugins = [],
 			toolPlugins = [];
 
 		model.plugins.forEach(function(item) {
@@ -26,13 +25,13 @@ export default Ember.Route.extend({
 		config.set('session', sessionPlugins);
 		config.set('tools', sessionPlugins);
 
-		// 'state' contains
-		state.set('files', model.files);
-		state.set('selectedFiles', []);
+		// 'app' contains per-session state data
+		app.set('files', model.files);
+		app.set('selectedFiles', []);
 
-		this._super(controller, state);
+		this._super(controller, app);
 
 		controller.set('config', config);
-		controller.set('state', state);
+		controller.set('app', app);
 	}
 });

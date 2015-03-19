@@ -4,22 +4,17 @@
 	</header>
 
 	<aside class="left">
-		{{wb-sessions items=config.session state=state label="DURAARK"}}
+		{{wb-sessions items=config.session app=app label="DURAARK"}}
 	</aside>
 
 	<main>
-		<div id="cesiumContainer"></div>
+		{{wb-file-explorer items=app.files onFileSelection="onFileSelection"}}
+
+		{{!-- <div id="cesiumContainer"></div> --}}
 		  {{!-- <script>
     var viewer = new Cesium.Viewer('cesiumContainer');
   </script>
 		{{cesium-globe}} --}}
-
-		{{#list-overview items=files as |file|}}
-			<center>
-				<p>Path: {{file.path}}</p>
-				<p>Size: {{file.size}}</p>
-			</center>
-		{{/list-overview}}
 	</main>
 
 	<aside class="right">

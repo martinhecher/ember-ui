@@ -3,7 +3,7 @@
 
 	<main>
 	{{#hk-sidebar files=state.files items=items as |item|}}
-		{{dynamic-component type=item.type meta=item files=files}}
+		{{dynamic-component type=item.type meta=item app=app}}
 	{{/hk-sidebar}}
 	</main>
 </div>

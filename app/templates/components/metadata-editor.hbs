@@ -10,8 +10,12 @@
 
 {{#unless hkIsMinimized}}
 <main>
-	{{#each driver in meta.options.items}}
-		<button>{{driver.label}}</button>
+	{{#each item in meta.options.items}}
+		<button>{{item.label}}</button>
+	{{/each}}
+
+	{{#each item in app.selectedFiles}}
+		<button>{{item.path}}</button>
 	{{/each}}
 </main>
 {{/unless}}
