@@ -3,10 +3,16 @@ import layout from '../templates/components/import-files-overview';
 import hkPlugin from '../mixins/hk-plugin';
 
 export default Ember.Component.extend(hkPlugin, {
-  layout: layout,
+	layout: layout,
 
-  hkIsDebugging: true,
+	hkIsDebugging: true,
+	hkInitialize: function() {
+		console.log('starting request ...');
+		// Ember.$.get('http://localhost:5001/files', function(data) {
+		// 	console.log('data: ' + JSON.stringify(data, null, 4));
+		// });
+	},
 
-  styleRoot: 'wb-import-files',
-  styleTheme: 't-light'
+	styleRoot: 'wb-import-files',
+	styleTheme: 't-light'
 });

@@ -11,9 +11,9 @@
 {{#unless hkIsMinimized}}
 <main>
 	<center>
-		<button>File</button><br>
-		<button>Folder</button><br>
-		<button>L3S (remote)</button>
+	{{#each driver in meta.options.storageDrivers}}
+		<button>{{driver.label}}</button><br>
+	{{/each}}
 	</center>
 </main>
 {{/unless}}

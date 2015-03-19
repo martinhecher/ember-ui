@@ -16,15 +16,12 @@ export default Ember.Route.extend({
 			sessionPlugins.push(item);
 			if (type === 'session') {
 				sessionPlugins.push(item);
-			} else if (type === 'sip-stage') {
-				stagePlugins.push(item);
 			} else if (type === 'tool') {
 				toolPlugins.push(item);
 			}
 		});
 
 		context.set('session', sessionPlugins);
-		context.set('stages', sessionPlugins);
 		context.set('tools', sessionPlugins);
 		context.set('files', model.files)
 

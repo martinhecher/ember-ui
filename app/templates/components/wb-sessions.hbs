@@ -2,8 +2,8 @@
 	<header>{{label}}</header>
 
 	<main>
-	{{#hk-sidebar items=items as |item|}}
-		{{dynamic-component type=item.type meta=item}}
+	{{#hk-sidebar files=files items=items as |item|}}
+		{{dynamic-component type=item.type meta=item files=files}}
 	{{/hk-sidebar}}
 	</main>
 </div>
