@@ -6,8 +6,9 @@
 	{{/glog-app}}
 {{/if}}
 
-<header>Metadata Editor</header>
+<header {{action "hkToggleMinimized"}}>{{meta.label}}</header>
 
+{{#unless hkIsMinimized}}
 <main>
 	<ul>
 		<li>Creator: Martin Hecher</li>
@@ -15,6 +16,7 @@
 		<li>Adress: Inffeldgasse 16c</li>
 	</ul>
 </main>
+{{/unless}}
 
 
 

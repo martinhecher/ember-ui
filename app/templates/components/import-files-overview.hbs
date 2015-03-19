@@ -6,8 +6,9 @@
 	{{/glog-app}}
 {{/if}}
 
-<header>Import Files</header>
+<header {{action "hkToggleMinimized"}}>Import Files</header>
 
+{{#unless hkIsMinimized}}
 <main>
 	<center>
 		<button>File</button><br>
@@ -15,4 +16,5 @@
 		<button>L3S (remote)</button>
 	</center>
 </main>
+{{/unless}}
 

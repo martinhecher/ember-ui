@@ -7,6 +7,10 @@ export default Ember.Component.extend(hkPlugin, {
   
   hkIsDebugging: true,
 
+  hkInitialize: function() {
+  	console.log('[metadata-editor] Restarting ...');
+  },
+
   styleRoot: 'wb-metadata-editor',
   styleTheme: 't-light'
 });

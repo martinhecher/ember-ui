@@ -7,7 +7,7 @@ export default Ember.Mixin.create({
     'glogItemClass'
   ],
 
-  glogEnabled: false,
+  glogEnabled: true,
   glogItemClass: 'glog-item',
   
   glogTheme: function() {
@@ -16,9 +16,5 @@ export default Ember.Mixin.create({
     } else {
       return '';
     }
-  }.property('glogEnabled'),
-
-  onGlogEnabledChanged: function() {
-    console.log('[hk-plugin] Toggled debugging ... (is now: ' + this.get('glogEnabled') + ')');
-  }.observes('glogEnabled')
+  }.property('glogEnabled')
 });

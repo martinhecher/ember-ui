@@ -9,58 +9,66 @@ default Ember.Route.extend({
             id: 0,
             label: "Import Files",
             type: 'import-files-overview',
-            anchor: 'session'  
+            anchor: 'session',
+            options: {
+                canBeMinimized: true
+            }
         }, {
             id: 1,
             label: "Recently Used Archives",
-            type: 'import-files-overview',
-            anchor: 'session'  
-        }, {
-            id: 2,
-            label: "Metadata",
             type: 'metadata-editor',
-            anchor: 'session'  
-        }, {
-            id: 3,
-            label: "File Information",
-            type: 'import-files-overview',
-            anchor: 'session'  
-        }, {
-            id: 4,
-            label: "Tagging",
-            type: 'import-files-overview',
-            anchor: 'session'  
-        }, {
-            id: 5,
-            label: "Archive Overview",
-            type: 'import-files-overview',
-            anchor: 'session'  
-        }, {
-            id: 6,
-            label: "File Preview",
-            type: 'import-files-overview',
-            anchor: 'session'  
-        }, {
-            id: 7,
-            label: "Geometric Enrichment",
-            type: 'import-files-overview',
-            anchor: 'session'  
-        }, {
-            id: 8,
-            label: "Export Selected",
-            type: 'import-files-overview',
-            anchor: 'session'  
-        }, {
-            id: 9,
-            label: "Semantic Enrichment",
-            type: 'import-files-overview',
-            anchor: 'session'  
-        }, {
-            id: 10,
-            label: "Search & Retrieve",
-            type: 'import-files-overview',
-            anchor: 'session'  
-        }];
+            anchor: 'session',
+            options: {
+                canBeMinimized: true
+            }
+        }
+        // }, {
+        //     id: 2,
+        //     label: "Metadata",
+        //     type: 'metadata-editor',
+        //     anchor: 'session'  
+        // }, {
+        //     id: 3,
+        //     label: "File Information",
+        //     type: 'import-files-overview',
+        //     anchor: 'session'  
+        // }, {
+        //     id: 4,
+        //     label: "Tagging",
+        //     type: 'import-files-overview',
+        //     anchor: 'session'  
+        // }, {
+        //     id: 5,
+        //     label: "Archive Overview",
+        //     type: 'import-files-overview',
+        //     anchor: 'session'  
+        // }, {
+        //     id: 6,
+        //     label: "File Preview",
+        //     type: 'import-files-overview',
+        //     anchor: 'session'  
+        // }, {
+        //     id: 7,
+        //     label: "Geometric Enrichment",
+        //     type: 'import-files-overview',
+        //     anchor: 'session'  
+        // }, {
+        //     id: 8,
+        //     label: "Export Selected",
+        //     type: 'import-files-overview',
+        //     anchor: 'session'  
+        // }, {
+        //     id: 9,
+        //     label: "Semantic Enrichment",
+        //     type: 'import-files-overview',
+        //     anchor: 'session'  
+        // }, {
+        //     id: 10,
+        //     label: "Search & Retrieve",
+        //     type: 'import-files-overview',
+        //     anchor: 'session'  
+        // }
+        ];
 
         appConfig.files = [{
             id: 0,
