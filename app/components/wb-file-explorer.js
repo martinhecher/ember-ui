@@ -6,7 +6,7 @@ export default Ember.Component.extend({
 
   actions: {
   	selectFile: function(file) {
-  		console.log('asdf:' + file.get('path'));
+  		console.log('[wb-file-explorer] selecting file: ' + file.get('path'));
   		this.sendAction('onFileSelection', file);
   	}
   }

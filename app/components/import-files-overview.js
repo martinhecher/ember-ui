@@ -14,5 +14,13 @@ export default Ember.Component.extend(hkPlugin, {
 	},
 
 	styleRoot: 'wb-import-files',
-	styleTheme: 't-light'
+	styleTheme: 't-light',
+
+	numSelectedFiles: 0,
+
+	// test for observing 'app' data:
+	onSelectedFilesChanged: function() {
+		var selectedFiles = this.get('numSelectedFiles');
+		this.set('numSelectedFiles', ++selectedFiles);
+	}.observes('app.selectedFiles.@each')
 });

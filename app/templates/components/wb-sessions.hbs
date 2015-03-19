@@ -2,7 +2,7 @@
 	<header>{{label}}</header>
 
 	<main>
-	{{#hk-sidebar files=state.files items=items as |item|}}
+	{{#hk-sidebar items=items as |item|}}
 		{{dynamic-component type=item.type meta=item app=app}}
 	{{/hk-sidebar}}
 	</main>
