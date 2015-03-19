@@ -6,11 +6,13 @@ import Themeable from '../mixins/themeable';
 export default Ember.Component.extend(Themeable, GraphicalLogger, {
   glogApp: true,
 
+  styleRoot: 'wb-import-files',
+  styleTheme: 'light',
+
   layout: layout,
 
   actions: {
   	toggleDebugger: function() {
-  		console.log('debugger: ' + this.get('glogApp'));
   		this.toggleProperty('glogApp');
   	}
   }

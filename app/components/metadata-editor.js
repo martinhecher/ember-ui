@@ -4,7 +4,8 @@ import Themeable from '../mixins/themeable';
 
 export default Ember.Component.extend(Themeable, {
   layout: layout,
+  glogApp: true,
 
   styleRoot: 'wb-metadata-editor',
-  styleTheme: 'default'
+  styleTheme: 'dark'
 });
