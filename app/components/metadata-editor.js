@@ -7,5 +7,5 @@ export default Ember.Component.extend(Themeable, {
   glogApp: true,
 
   styleRoot: 'wb-metadata-editor',
-  styleTheme: 'dark'
+  styleTheme: 't-light'
 });

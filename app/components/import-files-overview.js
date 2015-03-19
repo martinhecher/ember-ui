@@ -7,7 +7,7 @@ export default Ember.Component.extend(Themeable, GraphicalLogger, {
   glogApp: true,
 
   styleRoot: 'wb-import-files',
-  styleTheme: 'light',
+  styleTheme: 't-light',
 
   layout: layout,
 
