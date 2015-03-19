@@ -10,11 +10,9 @@
 
 {{#unless hkIsMinimized}}
 <main>
-	<ul>
-		<li>Creator: Martin Hecher</li>
-		<li>Date: 2015-04-01</li>
-		<li>Adress: Inffeldgasse 16c</li>
-	</ul>
+	{{#each driver in meta.options.items}}
+		<button>{{driver.label}}</button>
+	{{/each}}
 </main>
 {{/unless}}
 

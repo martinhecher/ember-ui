@@ -13,7 +13,7 @@ default Ember.Route.extend({
                 options: {
                     canBeMinimized: true,
 
-                    storageDrivers: [{
+                    items: [{
                         type: 'files',
                         label: 'Files',
                         defaultFolder: '~/'
@@ -32,7 +32,18 @@ default Ember.Route.extend({
                 type: 'metadata-editor',
                 anchor: 'session',
                 options: {
-                    canBeMinimized: true
+                    canBeMinimized: true,
+
+                    items: [{
+                        type: 'archive',
+                        label: 'Infeldgasse 16c'
+                    }, {
+                        type: 'archive',
+                        label: 'Nygade'
+                    }, {
+                        type: 'archive',
+                        label: 'Haus 30'
+                    }]
                 }
             }
             // }, {
