@@ -1,4 +1,17 @@
-# Initial Setup (SASS and susy)
+# ember-ui
+
+'ember-ui' supports the development of a graphical user interface (GUI) with ember. It provides general purpose widgets wich are common in . Currently the development effort focuses on full-screen operated GUIs. The components implemented for 'ember-ui' are used to develop a web-application to long-term archive knowledge in the architectural domain. See http://duraark.eu.
+
+## Components
+
+* hk-plugin
+
+## Mixins
+
+* Themeable
+* GLog
+
+### Bootstrapping: SASS and susy (this is only a node for myself on how to install sass and susy within an  ermber-cli application. You can safely ignore it.)
 
 * ember new myproject
 * cd myproject
