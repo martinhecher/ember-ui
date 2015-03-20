@@ -1,20 +1,14 @@
-<div class="hk-main">
+<div class="hk-app">
 	<header>
-		<span class="wb-toolswitch">{{#link-to "rpe"}}&#9991;{{/link-to}}</span>
+		<span id="wui-app-store">{{#link-to "rpe"}}&#9991;{{/link-to}}</span>
 	</header>
 
 	<aside class="left">
-		{{wb-sessions items=config.session app=app label="DURAARK"}}
+		{{wb-session items=config.session app=app label="DURAARK"}}
 	</aside>
 
 	<main>
 		{{wb-file-explorer items=app.files onFileSelection="onFileSelection"}}
-
-		{{!-- <div id="cesiumContainer"></div> --}}
-		  {{!-- <script>
-    var viewer = new Cesium.Viewer('cesiumContainer');
-  </script>
-		{{cesium-globe}} --}}
 	</main>
 
 	<aside class="right">

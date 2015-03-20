@@ -11,6 +11,6 @@ export default Ember.Component.extend(hkPlugin, {
   	console.log('[metadata-editor] Restarting ...');
   },
 
-  styleRoot: 'wb-metadata-editor',
+  styleRoot: 'wui-metadata-editor',
   styleTheme: 't-light'
 });

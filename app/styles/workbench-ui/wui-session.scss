@@ -1,30 +1,31 @@
-.wb-archive-overview {
-  li {
-    @include gallery(3 of 12);
-
-    height: 150px;
-
-    margin-bottom: gutter(10);
-    
-    color: gray;
-    background-color: white;
-  }
-}
-
-.wb-archive-overview {
+.wui-sessions {
   ul {
     margin: 0;
     padding: 0;
 
     list-style-type: none;
-  }
+
+    overflow: auto;
+   }
+
+  // li {
+  //   border-width: 1px;
+  //   border-color: black;
+  //   border-bottom-style: solid;
+  // }
 
   li:hover {
     background-color: lightgray;
   }
 }
 
-.wb-archive-overview > header {
+// .wui-sessions:after {
+//   content:"";
+//   display:table;
+//   clear:both;
+// }
+
+.wui-sessions > header {
   position: absolute;
 
   top: 0;
@@ -32,7 +33,6 @@
   right: 0;
 
   background-color: darkgray;
-  color: white;
 
   padding: 5px;
 
@@ -40,13 +40,9 @@
 
   text-align: center;
   line-height: $header-height;
-
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
 }
 
-.wb-archive-overview > main {
+.wui-sessions > main {
   position: absolute;
   
   top: $header-height + 12px; // FIXXME: take into account header padding + border
@@ -54,11 +50,9 @@
   right: 0;
 
   height: 100%;
-
-  margin: 20px;
 }
 
-.wb-archive-overview > footer {
+.wui-sessions > footer {
   position: absolute;
 
   bottom: 0;

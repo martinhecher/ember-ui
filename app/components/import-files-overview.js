@@ -13,7 +13,7 @@ export default Ember.Component.extend(hkPlugin, {
 		// });
 	},
 
-	styleRoot: 'wb-import-files',
+	styleRoot: 'wui-import-files',
 	styleTheme: 't-light',
 
 	numSelectedFiles: 0,

@@ -1,4 +1,4 @@
-.wb-stages {
+.wui-stages {
   ul {
     margin: 0;
     padding: 0;
@@ -23,7 +23,7 @@
   }
 }
 
-.wb-stages > header {
+.wui-stages > header {
   position: absolute;
 
   top: 0;
@@ -45,7 +45,7 @@
   border-style: solid;
 }
 
-.wb-stages > main {
+.wui-stages > main {
   position: absolute;
   
   top: $header-height + 12px; // FIXXME: take into account header padding + border
@@ -55,7 +55,7 @@
   height: 100%;
 }
 
-.wb-stages > footer {
+.wui-stages > footer {
   position: absolute;
 
   bottom: 0;
