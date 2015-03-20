@@ -1,6 +1,6 @@
 # ember-ui
 
-'ember-ui' supports the development of a graphical user interface (GUI) with ember. It provides general purpose widgets wich are common in . Currently the development effort focuses on full-screen operated GUIs. The components implemented for 'ember-ui' are used to develop a web-application to long-term archive knowledge in the architectural domain. See http://duraark.eu.
+'ember-ui' supports the development of a graphical user interface (GUI) with ember. It provides general purpose widgets wich are common web-application. Currently the development effort focuses on full-screen operated GUIs. The components implemented for 'ember-ui' are used to develop a web-application to long-term archive knowledge in the architectural domain. See http://duraark.eu.
 
 ## Components
 
