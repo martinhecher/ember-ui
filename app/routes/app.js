@@ -9,21 +9,21 @@ export default Ember.Route.extend({
 		var config = Ember.Object.create(),
 			app = Ember.Object.create(),
 			sessionPlugins = [],
-			toolPlugins = [];
+			stagePlugins = [];
 
 		model.plugins.forEach(function(item) {
 			var type = item.get('anchor');
 			sessionPlugins.push(item);
 			if (type === 'session') {
 				sessionPlugins.push(item);
-			} else if (type === 'tool') {
-				toolPlugins.push(item);
+			} else if (type === 'stage') {
+				stagePlugins.push(item);
 			}
 		});
 
 		// 'config' contains all data loaded from the backend:
 		config.set('session', sessionPlugins);
-		config.set('tools', sessionPlugins);
+		config.set('stages', stagePlugins);
 
 		// 'app' contains per-session state data
 		app.set('files', model.files);

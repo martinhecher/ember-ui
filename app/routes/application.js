@@ -45,28 +45,31 @@ default Ember.Route.extend({
                         label: 'Haus 30'
                     }]
                 }
-            }
-            // }, {
-            //     id: 2,
-            //     label: "Metadata",
-            //     type: 'metadata-editor',
-            //     anchor: 'session'  
-            // }, {
-            //     id: 3,
-            //     label: "File Information",
-            //     type: 'import-files-overview',
-            //     anchor: 'session'  
-            // }, {
-            //     id: 4,
-            //     label: "Tagging",
-            //     type: 'import-files-overview',
-            //     anchor: 'session'  
-            // }, {
-            //     id: 5,
-            //     label: "Archive Overview",
-            //     type: 'import-files-overview',
-            //     anchor: 'session'  
-            // }, {
+            }, {
+                id: 2,
+                label: "RISE",
+                type: 'metadata-editor',
+                anchor: 'stage'  
+            }, {
+                id: 3,
+                label: "IFCReconstruction",
+                // type: 'geo-ifcreconstruction',
+                type: 'metadata-editor',
+                anchor: 'stage'  
+            }, {
+                id: 4,
+                label: "DifferenceDetection",
+                // type: 'geo-differencedetection',
+                type: 'metadata-editor',
+                anchor: 'stage'  
+            }, {
+                id: 5,
+                label: "Semantic Enrichment",
+                // type: 'semantic-enrichment',
+                type: 'metadata-editor',
+                anchor: 'stage'  
+            },
+            // {
             //     id: 6,
             //     label: "File Preview",
             //     type: 'import-files-overview',
