@@ -2,6 +2,14 @@
   position: relative;
 }
 
+.wui-metadata-editor.js-tool-enabled {
+    background: green;
+}
+
+.wui-metadata-editor.js-tool-disabled {
+  color: lightgray;
+}
+
 .t-light.wui-metadata-editor {
   header {
     padding: 10px;
