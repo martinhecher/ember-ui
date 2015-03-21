@@ -37,6 +37,7 @@
 .hk-app > main {
   position: absolute;
 
+  padding: 25px; // FIXXME: should be set in child component!
   top: $header-height;
   bottom: $footer-height;
   left: $sidebarLeft-width;

@@ -8,12 +8,6 @@
     overflow: auto;
    }
 
-  // li {
-  //   border-width: 1px;
-  //   border-color: black;
-  //   border-bottom-style: solid;
-  // }
-
   li:hover {
     background-color: lightgray;
   }
@@ -45,7 +39,7 @@
 .wui-sessions > main {
   position: absolute;
   
-  top: $header-height + 12px; // FIXXME: take into account header padding + border
+  top: 0; //$header-height + 12px; // FIXXME: take into account header padding + border
   left: 0;
   right: 0;
 

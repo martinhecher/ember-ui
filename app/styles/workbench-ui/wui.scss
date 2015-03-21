@@ -1,11 +1,36 @@
-@import "wui-globals";
-
-// app page::
-@import "wui-file-explorer";
-@import "wui-session";
-@import "wui-stages";
-@import "wui-import-files";
-@import "wui-metadata-editor";
+// app page:
+@import "wui-file-explorer/wui-file-explorer";
+@import "wui-session/wui-session";
+@import "wui-stages/wui-stages";
+@import "wui-import-files/wui-import-files";
+@import "wui-metadata-editor/wui-metadata-editor";
 
 // admin page:
-@import "wui-admin";
+@import "wui-admin/wui-admin";
+
+#wui-app-store {
+  z-index: 100;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: 2px;
+  font-size: 25px;
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a:visited {
+      text-decoration: none;
+  }
+
+  a:hover {
+      text-decoration: none;
+  }
+
+  a:active {
+      text-decoration: none;
+  }
+}
