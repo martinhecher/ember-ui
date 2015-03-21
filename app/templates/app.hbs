@@ -11,10 +11,6 @@
 		{{wb-file-explorer items=app.files onFileSelection="onFileSelection"}}
 	</main>
 
-	<aside class="right">
-		{{wb-tools items=config.tools label="WORKBENCH"}}
-	</aside>
-
 	<footer>
 		INFO: #sessionPlugins: {{config.session.length}} | #toolPlugins: {{config.tools.length}} | numSelectedFiles: {{app.selectedFiles.length}}
 	</footer>

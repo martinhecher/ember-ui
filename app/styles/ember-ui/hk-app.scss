@@ -12,7 +12,7 @@
 
   padding-left: 30px;
 
-  background-color: lightgreen;
+  background-color: $header-background-color;
 
   line-height: $header-height;
 }
@@ -30,17 +30,7 @@
 
     width: $sidebarLeft-width;
 
-    background-color: lightblue;
-  }
-
-  &.right {
-    position: absolute;
-
-    right: 0;
-
-    width: $sidebarRight-width;
-
-    background-color: orange;
+    background-color: $sidebarRight-background-color;
   }
 }
 
@@ -50,9 +40,9 @@
   top: $header-height;
   bottom: $footer-height;
   left: $sidebarLeft-width;
-  right: $sidebarRight-width;
+  right: 0;
 
-  background-color: brown;
+  background-color: $main-background-color;
 }
 
 .hk-app >footer {
@@ -64,5 +54,5 @@
 
   height: $footer-height;
 
-  background-color: darkgray;
+  background-color: $header-background-color;
 }

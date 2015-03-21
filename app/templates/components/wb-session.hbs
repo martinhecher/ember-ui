@@ -1,5 +1,7 @@
 <div class="wui-sessions">
-	<header>{{label}}</header>
+	{{#if showHeader}}
+		<header>{{label}}</header>
+	{{/if}}
 
 	<main>
 	{{#hk-sidebar items=items as |item|}}
