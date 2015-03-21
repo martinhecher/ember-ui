@@ -2,7 +2,7 @@
 	<header>
 		<span id="wui-app-store">{{#link-to "rpe"}}&#9991;{{/link-to}}</span>
 
-		{{wb-stages items=config.stages}} // FIXXME: does show in wb-sessiongit 
+		{{wb-stages items=config.stages}} // FIXXME: does show in wb-session
 	</header>
 
 	<aside class="left">
@@ -15,5 +15,9 @@
 
 	<footer>
 		INFO: #sessionPlugins: {{config.session.length}} | #toolPlugins: {{config.tools.length}} | numSelectedFiles: {{app.selectedFiles.length}}
+
+		{{#wui-metadata-button model=app.selectedFiles as |file|}}
+			<h1>File: {{file.path}}</h1>
+		{{/wui-metadata-button}}
 	</footer>
 </div>

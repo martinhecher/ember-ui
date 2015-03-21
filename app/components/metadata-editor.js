@@ -6,7 +6,7 @@ export default Ember.Component.extend(hkPlugin, {
   classNameBindings: ['isEnabled:js-tool-enabled:js-tool-disabled'],
   layout: layout,
   
-  isEnabled: true,
+  isEnabled: true, // FIXXME: integrate into 'hk-plugin' -> hkIsHighlighted
 
   hkIsDebugging: true,
 

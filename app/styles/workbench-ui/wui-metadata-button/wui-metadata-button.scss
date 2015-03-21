@@ -1,0 +1,26 @@
+.wui-metadata-button {
+	&.js-hk-items {
+		display: none;
+	}
+
+	&.js-hk-no-items {
+		display: inline-block;
+	}
+
+	z-index: 1;
+
+	position: absolute;
+
+	bottom: 0;
+	right: 20px;
+
+	margin: 10px;
+	padding: 20px;
+
+	background-color: #EBEAA0;
+
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 8px;
+	border-color: gray;
+}

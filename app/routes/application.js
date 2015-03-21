@@ -127,9 +127,18 @@ default Ember.Route.extend({
         var pluginRecords = this.store.pushMany('plugin-component', appConfig.plugins);
         var fileRecords = this.store.pushMany('file', appConfig.files);
 
+        var appContext = {
+            label: 'WorkbenchUI',
+            selectedFiles: [],
+        }
+
         return {
             plugins: pluginRecords,
-            files: fileRecords
+            files: fileRecords,
+            app: appContext
         };
+    },
+
+    setupController: function(controller, model) {
     }
 });

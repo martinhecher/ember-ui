@@ -6,13 +6,16 @@ export default Ember.Route.extend({
 	},
 
 	setupController: function(controller, model) {
-		var config = Ember.Object.create(),
-			app = Ember.Object.create(),
-			sessionPlugins = [],
-			stagePlugins = [];
+		var app = model.app,
+			plugins = model.plugins,
+			config = Ember.Object.create(),
+			sessionPlugins = [];
+			var stagePlugins = [];
 
-		model.plugins.forEach(function(item) {
+		plugins.forEach(function(item) {
+			console.log('igte: ' + JSON.stringify(item, null, 4));
 			var type = item.get('anchor');
+			console.log('acnh: ' + type);
 			sessionPlugins.push(item);
 			if (type === 'session') {
 				sessionPlugins.push(item);
@@ -21,15 +24,15 @@ export default Ember.Route.extend({
 			}
 		});
 
-		// 'config' contains all data loaded from the backend:
+		// 'app' contains per-session state data + an 'about' information from backend data:
+		app.files = model.files;
+		app.selectedFiles = app.selectedFiles;
+
+		// 'config' contains stored application config loaded from the backend:
 		config.set('session', sessionPlugins);
 		config.set('stages', stagePlugins);
 
-		// 'app' contains per-session state data
-		app.set('files', model.files);
-		app.set('selectedFiles', []);
-
-		this._super(controller, app);
+		this._super(controller, model);
 
 		controller.set('config', config);
 		controller.set('app', app);
