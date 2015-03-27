@@ -1,4 +1,6 @@
-{{!-- <span {{action "hkToggleDebugger"}} class="wui-toolswitch">&#9991;</span> --}}
+<span {{action "hkToggleMinimized"}} class="wui-toolswitch">&#9991; Minimize</span>
+<span {{action "hkToggleHighlight"}} class="wui-toolswitch">&#9991; Highlight</span>
+<span {{action "hkToggleDebugger"}} class="wui-toolswitch">&#9991; Debugger</span>
 
 {{#if hkIsDebugging}}
 	{{#glog-app}}
@@ -6,7 +8,7 @@
 	{{/glog-app}}
 {{/if}}
 
-<header {{action "hkToggleMinimized"}}>{{meta.label}}</header>
+<div {{action "hkToggleMinimized"}}>metadata-editor{{meta.label}}</div>
 
 {{#unless hkIsMinimized}}
 <main>
@@ -17,6 +19,12 @@
 {{!-- 	{{#each item in app.selectedFiles}}
 		<button>{{item.path}}</button>
 	{{/each}} --}}
+	<ul>
+		<li>bla</li>
+		<li>bla</li>
+		<li>bla</li>
+		<li>bla</li>
+	</ul>
 </main>
 {{/unless}}
 

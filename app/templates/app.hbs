@@ -6,11 +6,12 @@
 	</header>
 
 	<aside class="left">
-		{{wb-session items=config.session app=app label="DURAARK"}}
+		{{wb-session items=config.session app=app label=app.label}}
 	</aside>
 
 	<main>
-		{{wb-file-explorer items=app.files onFileSelection="onFileSelection"}}
+		{{!-- {{wb-file-explorer items=app.files onFileSelection="onFileSelection"}} --}}
+		{{metadata-editor}}
 	</main>
 
 	<footer>

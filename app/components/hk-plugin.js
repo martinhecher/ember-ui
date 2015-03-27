@@ -1,22 +1,16 @@
-import Ember from 'ember';
-import layout from '../templates/components/hk-plugin';
-import GLog from '../mixins/glog';
-import Themeable from '../mixins/themeable';
+// import Ember from 'ember';
+// import layout from '../templates/components/hk-plugin';
+// import GLog from '../mixins/glog';
+// import Themeable from '../mixins/themeable';
 
-export default Ember.Mixin.create(Themeable, GLog, {
-	classNameBindings: ['hkPluginNamespace'],
-  	
-  	hkPluginNamespace: 'hkplugin',
-  	styleTheme: 'dark',
+// export default Ember.Mixin.create(Themeable, GLog, {
+// 	classNameBindings: [
+// 		'hkIsEnabled:js-hk-enabled:js-hk-not-enabled'
+// 	],
 
-  	actions: {
-  		toggleDebugger: function() {
-  			this.toggleProperty('isDebugging');
-  			console.log('[hk-plugin] Toggled debugging ...');
-  		}
-  	},
+	
 
-  	onIsDebuggingChanged: function() {
-  		this.set('glogEnabled', false);
-  	}
-});
+// 	onIsDebuggingChanged: function() {
+// 		this.set('glogEnabled', false);
+// 	}
+// });

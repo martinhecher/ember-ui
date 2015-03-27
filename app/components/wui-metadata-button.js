@@ -12,8 +12,8 @@ export default Ember.Component.extend(hkElement, {
 		console.log('Initializing "wui-metadata-button" ...');
 	},
 
-	styleRoot: 'wui-metadata-button',
-	styleTheme: 't-light',
+	hkStyle: 'wui-metadata-button',
+	hkTheme: 't-light',
 
 	hasItems: false,
 

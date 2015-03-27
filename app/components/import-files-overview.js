@@ -5,6 +5,9 @@ import hkPlugin from '../mixins/hk-plugin';
 export default Ember.Component.extend(hkPlugin, {
 	layout: layout,
 
+	hkStyle: 'wui-import-files',
+	hkTheme: 't-light',
+	
 	hkIsDebugging: true,
 	hkInitialize: function() {
 		console.log('starting request ...');
@@ -12,9 +15,6 @@ export default Ember.Component.extend(hkPlugin, {
 		// 	console.log('data: ' + JSON.stringify(data, null, 4));
 		// });
 	},
-
-	styleRoot: 'wui-import-files',
-	styleTheme: 't-light',
 
 	numSelectedFiles: 0,
 
