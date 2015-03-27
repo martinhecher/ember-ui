@@ -5,6 +5,8 @@ default Ember.Route.extend({
     model: function() {
         var appConfig = {};
 
+        // TODO: introduce region configs here, e.g. 'session', 'main', 'header', etc.
+        
         appConfig.plugins = [{
                 id: 0,
                 label: "Import Files",
@@ -28,47 +30,58 @@ default Ember.Route.extend({
                 },
             }, {
                 id: 1,
-                label: "Recently Used Archives",
-                type: 'metadata-editor',
-                anchor: 'session',
+                label: "Metadata",
+                type: 'wui-metadata-indicator',
+                anchor: 'toolbar',
                 options: {
                     canBeMinimized: true,
 
-                    items: [{
-                        type: 'archive',
-                        label: 'Infeldgasse 16c'
-                    }, {
-                        type: 'archive',
-                        label: 'Nygade'
-                    }, {
-                        type: 'archive',
-                        label: 'Haus 30'
-                    }]
-                }
-            }, {
-                id: 2,
-                label: "RISE",
-                type: 'metadata-editor',
-                anchor: 'stage'  
-            }, {
-                id: 3,
-                label: "IFCReconstruction",
-                // type: 'geo-ifcreconstruction',
-                type: 'metadata-editor',
-                anchor: 'stage'  
-            }, {
-                id: 4,
-                label: "DifferenceDetection",
-                // type: 'geo-differencedetection',
-                type: 'metadata-editor',
-                anchor: 'stage'  
-            }, {
-                id: 5,
-                label: "Semantic Enrichment",
-                // type: 'semantic-enrichment',
-                type: 'metadata-editor',
-                anchor: 'stage'  
-            },
+                    needs: ['selectedFiles']
+                },
+            } 
+            // {
+            //     id: 1,
+            //     label: "Recently Used Archives",
+            //     type: 'metadata-editor',
+            //     anchor: 'session',
+            //     options: {
+            //         canBeMinimized: true,
+
+            //         items: [{
+            //             type: 'archive',
+            //             label: 'Infeldgasse 16c'
+            //         }, {
+            //             type: 'archive',
+            //             label: 'Nygade'
+            //         }, {
+            //             type: 'archive',
+            //             label: 'Haus 30'
+            //         }]
+            //     }
+            // }, {
+            //     id: 2,
+            //     label: "RISE",
+            //     type: 'metadata-editor',
+            //     anchor: 'stage'  
+            // }, {
+            //     id: 3,
+            //     label: "IFCReconstruction",
+            //     // type: 'geo-ifcreconstruction',
+            //     type: 'metadata-editor',
+            //     anchor: 'stage'  
+            // }, {
+            //     id: 4,
+            //     label: "DifferenceDetection",
+            //     // type: 'geo-differencedetection',
+            //     type: 'metadata-editor',
+            //     anchor: 'stage'  
+            // }, {
+            //     id: 5,
+            //     label: "Semantic Enrichment",
+            //     // type: 'semantic-enrichment',
+            //     type: 'metadata-editor',
+            //     anchor: 'stage'  
+            // },
             // {
             //     id: 6,
             //     label: "File Preview",
@@ -109,12 +122,12 @@ default Ember.Route.extend({
             creator: 'Martin'
         }, {
             id: 2,
-            path: '/tmp/scan-2014-02-30-haus_30.e57',
+            path: '/tmp/scan-2014-02-30-haus_30.ifc',
             size: 38273943,
             creator: 'Martin'
         }, {
             id: 3,
-            path: '/tmp/scan-2015-02-30-haus_30.e57',
+            path: '/tmp/scan-2015-02-30-haus_30.ifc',
             size: 38273943,
             creator: 'Martin'
         }, {

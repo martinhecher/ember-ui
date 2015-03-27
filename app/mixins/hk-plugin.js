@@ -5,18 +5,22 @@ import Themeable from '../mixins/themeable';
 export default Ember.Mixin.create(Themeable, GLog, {
     classNameBindings: [
         'hkStyle',
-        'hkIsEnabled:js-hk-enabled:js-hk-not-enabled'
+        'hkTheme',
+        'hkIsEnabled:js-hk-enabled:js-hk-not-enabled',
+        'hkIsMinimized:js-hk-minimized:js-hk-not-minimized',
+        'hkIsHighlighted:js-hk-highlighted:js-hk-not-highlighted',
+        'hkIsDebugging:js-hk-debugging:js-hk-not-debugging',
     ],
 
     // States:
     // TODO: encapsulate into 'states' hash, similar to 'actions'?
-    hkisEnabled: true,
+    hkIsEnabled: true,
     hkIsMinimized: false,
     hkIsHighlighted: false,
     hkIsDebugging: false,
 
     // Themeable:
-    hkStyle: 'hk-plugin',
+    hkStyle: 'hk-plugin-style',
     hkTheme: 't-default',
 
     actions: {

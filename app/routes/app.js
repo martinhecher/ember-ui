@@ -13,10 +13,7 @@ export default Ember.Route.extend({
 			var stagePlugins = [];
 
 		plugins.forEach(function(item) {
-			console.log('igte: ' + JSON.stringify(item, null, 4));
 			var type = item.get('anchor');
-			console.log('acnh: ' + type);
-			sessionPlugins.push(item);
 			if (type === 'session') {
 				sessionPlugins.push(item);
 			} else if (type === 'stage') {
